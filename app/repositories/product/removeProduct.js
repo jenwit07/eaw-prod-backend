@@ -16,7 +16,7 @@ export function removeProductService(_username, productIDList) {
                 where: {
                     shopID: _shopid,
                     productID: {
-                        [Op.in]: productIDList
+                        [Op.in]: productIDList.delete_list
                     }
                 }
             }, {
